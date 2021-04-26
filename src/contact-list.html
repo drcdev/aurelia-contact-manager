@@ -1,0 +1,10 @@
+<template>
+    <ul class="ui divided list">
+        <div repeat.for="contact of contacts" class="${contact.id == selectedId ? 'active item' : 'item'}">
+            <a route-href="route: contacts; params.bind: {id:contact.id}" click.delegate="$parent.select(contact)">
+                <strong>${contact.firstName} ${contact.lastName}</strong><br>
+                <small>${contact.email}</small>
+            </a>
+        </div>
+    </ul>
+</template>

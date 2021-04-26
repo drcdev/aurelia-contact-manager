@@ -1,0 +1,22 @@
+<template>
+    <require from="contact-list"></require>
+    <div class="ui fixed menu">
+        <div class="ui container">
+            <a class="item" href="/">
+                <i class="user icon"></i>
+                <span>Contacts</span>
+            </a>
+
+        </div>
+    </div>
+    <div class="ui container segment" style="margin-top: 50px;">
+        <div class="ui grid">
+            <div class="ui six wide column">
+                <contact-list></contact-list>
+            </div>
+            <div class="ui ten wide column">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</template>
