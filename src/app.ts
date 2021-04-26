@@ -1,13 +1,14 @@
 import { Router, RouterConfiguration } from 'aurelia-router';
 import { PLATFORM } from 'aurelia-pal';
+import '../semantic/dist/semantic.min.css';
 
 export class App {
     router: Router;
 
     configureRouter(config: RouterConfiguration, router: Router) {
         config.title = 'Contacts';
-        config.options.pushState = true;
-        config.options.root = '/';
+        // config.options.pushState = true;
+        // config.options.root = '/';
         config.map([
             { route: '', moduleId: PLATFORM.moduleName('no-selection'), title: 'Select' },
             { route: 'contacts/:id', moduleId: PLATFORM.moduleName('contact-detail'), name: 'contacts' }

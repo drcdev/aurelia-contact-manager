@@ -5,6 +5,7 @@
                 <strong>${contact.firstName} ${contact.lastName}</strong><br>
                 <small>${contact.email}</small>
             </a>
+            <span class="ui right floated red text">${contact.id === selectedId ? "editing" : ""}</span>
         </div>
     </ul>
 </template>
