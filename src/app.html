@@ -10,6 +10,7 @@
         </div>
     </div>
     <div class="ui container segment" style="margin-top: 50px;">
+        <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
         <div class="ui grid">
             <div class="ui six wide column">
                 <contact-list></contact-list>
